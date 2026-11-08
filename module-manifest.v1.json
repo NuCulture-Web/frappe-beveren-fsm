@@ -1,0 +1,27 @@
+{
+	"contract": "module-manifest.v1",
+	"id": "field-service-orders",
+	"name": "Field service orders",
+	"description": "Beveren FSM on the client's ERPNext site: service requests, quotations, service orders, technician appointments, a scheduling board, maintenance contracts and repair shipments, invoiced in ERPNext.",
+	"scope": "core",
+	"product": "back-office",
+	"frappeApp": "beveren_fsm",
+	"enable": {
+		"perCompany": true,
+		"method": "GET",
+		"path": "/app/service"
+	},
+	"probe": {
+		"perCompany": true,
+		"method": "GET",
+		"path": "/.well-known/nuculture-build/field-service-orders.json"
+	},
+	"peopleRoles": {
+		"Owner": [
+			"Service Manager"
+		],
+		"Manager": [
+			"Service Manager"
+		]
+	}
+}
